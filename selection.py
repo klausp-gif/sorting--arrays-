@@ -9,16 +9,7 @@ def selection_sort(array):
         if mini != i:
             array[mini] = array[i]
             array[i] = minv
+        print(array)
 
-def time_sort(algo, n):
-    import time, random
-
-    # n samples with replacement from [0,1,...,n-1]
-    data = random.choices(range(n), k=n)
-
-    start = time.process_time()
-    algo(data)
-    end = time.process_time()
-    return end - start
-
-print(time_sort(selection_sort, 8*10**3))
+array = [-4, 11, 7, -12, 6, 1]
+print(selection_sort(array))
